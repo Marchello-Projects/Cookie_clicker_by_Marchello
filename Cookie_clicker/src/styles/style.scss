@@ -1,0 +1,81 @@
+@mixin FlexElement($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+body {
+    @include FlexElement(center, center);
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-48.09deg, #15ff00 -54.87%, #00d9ff 100%);
+}
+
+.pnotify {
+    font-family: "Overpass Mono";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mainContent {
+    &_logoBlockCenter{
+        @include FlexElement(center, center);
+        &_logoBlock {
+            @include FlexElement(center, center);
+            column-gap: 20px;
+            width: 351px;
+            height: 81px;
+            background: rgba(0, 0, 0, 0.50);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 10px;
+            &_logoElements {
+                width: 210px;
+                height: 46px;
+                &_titleText {
+                    color: #FFF;
+                    font-family: "Overpass Mono";
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                &_nameText {
+                    color: #FFF;
+                    font-family: "Overpass Mono";
+                    font-size: 25px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+    &_cookieButton {
+        margin-top: 38px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    &_counterBlockCenter {
+        @include FlexElement(center, center);
+        margin-top: 38px;
+        &_counterBlock {
+            @include FlexElement(center, center);
+            width: 68px;
+            height: 81px;
+            background: rgba(0, 0, 0, 0.50);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            border-radius: 10px;
+            &_counterText {
+                color: #fff;
+                font-family: "Overpass Mono";
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+}
