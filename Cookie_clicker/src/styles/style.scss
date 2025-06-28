@@ -63,8 +63,6 @@ body {
         margin-top: 38px;
         &_counterBlock {
             @include FlexElement(center, center);
-            width: 68px;
-            height: 81px;
             background: rgba(0, 0, 0, 0.50);
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             border-radius: 10px;
@@ -78,4 +76,44 @@ body {
             }
         }
     }
+    &_resetButtonCenter {
+        @include FlexElement(center, center);
+        &_resetButton {
+            width: 269px;
+            height: 31px;           
+            border-radius: 2px;
+            background: #ffffff;
+            color: #000000;
+            font-family: "Overpass Mono";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            transition-duration: 0.6s;
+            cursor: pointer;
+            margin-top: 20px;
+            &:hover {
+                background: #C81515;
+                color: #ffffff;
+                transition-duration: 0.6s;
+            }
+        }    
+    }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cookie-shrink {
+  animation: shrink 0.2s ease;
 }
